@@ -61,16 +61,17 @@ para.addEventListener("click", function(e){
   e.preventDefault();
 });
 
+const sec1 = document.getElementsByTagName("section")[0];
 
-const firstp = document.querySelectorAll('p')[0];
-firstp.style.color='Aqua';
+const ppp = document.querySelectorAll('p')[1];
+// firstp.style.color='blue';
 
 const newp = document.createElement("p");
 const node = document.createTextNode("ok here is the new one");
 newp.appendChild(node);
-const op = document.getElementsByTagName('p')[0];
+// const op = document.getElementsByTagName('p')[0];
 // document.body.appendChild(newp);
-op.appendChild(newp);
+sec1.insertBefore(newp,ppp);
 
 //  can I add a new paragrah intead of append it as a child?
 
@@ -85,11 +86,13 @@ const buttonnew = document.createElement("button");
 buttonnew.innerHTML = "click here";
 document.body.appendChild(buttonnew);
 
-buttonnew.addEventListener("click", function(){
-    let pic2 = document.createElement("img");
+let pic2 = document.createElement("img");
 pic2.src = "https://source.unsplash.com/random";
 pic2.width = "90";
+buttonnew.addEventListener("click", function(){
+    pic2.src = "https://source.unsplash.com/random";
 sec.appendChild(pic2);
+console.log(1,pic2.src);
   });
 
 // how to manipulate the position of the pic inserted
