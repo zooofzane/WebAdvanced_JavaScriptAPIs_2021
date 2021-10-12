@@ -24,3 +24,14 @@ input{
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+span{
+    margin: 20;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color:rgb(0, 0, 0);
+    background-color: aliceblue;
+}

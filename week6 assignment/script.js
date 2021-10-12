@@ -40,16 +40,24 @@ btn.style.width = '200px' ;
 btn.style.height = '200px' ;
 btn.style.position = 'center' ;
 document.body.appendChild(btn);
+
+
+let newtext = document.createElement("span");
+document.body.insertBefore(newtext,btn);
+
 let img = document.createElement("img");
-document.body.insertBefore(inputform, btn);
+document.body.insertBefore(inputform, newtext);
 btn.addEventListener("click",function(){
     img.src = 'https://source.unsplash.com/random/'+Math.random();
     document.body.insertBefore(img,inputform);
+    let result = answer(inputform.value);
+    newtext.innerHTML = result;
 });
 
 // EXERCISE 5:
 // Use a form and DOM and form event listener to update the AI/chatbot object created in class 4 assignment. Use basic validation to make sure a question is actually asked and then display the answer back in the web page by creating a new DOM element.
 
+function answer(i){
 let ai ={
     qs:[ 
     ["how are you", "getting better"],
@@ -68,16 +76,5 @@ let ai ={
         }
     }
 }
-
-// let ans = prompt('Ask away'); 
-
-
-
-
-
-
-
-let q='what is your name';
-//   let result = ai.checkAnswer(ans);
-//   console.log(result);
-//   document.getElementById("answer").innerHTML = result;
+return ai.checkAnswer(i);
+}
