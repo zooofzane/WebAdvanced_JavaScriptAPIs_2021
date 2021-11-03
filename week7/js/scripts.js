@@ -27,7 +27,7 @@ button.addEventListener("click",getUserData);
 
 function getUserData(){
     // let url = "https://ucdpapi.pcr.uu.se/api/"+"gedevents"+"/21.1?pagesize=1";
-    let url = "https://ucdpapi.pcr.uu.se/api/gedevents/21.1?pagesize=1";
+    let url = "https://ucdpapi.pcr.uu.se/api/"+"gedevents/21.1?pagesize=1";
     let xhr = new XMLHttpRequest();
     xhr.onload = function(){
         if(xhr.status === 200){
@@ -43,3 +43,38 @@ function getUserData(){
     console.log("end ajax.......");
 
 }
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  call back                                 */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------- callback -------------------------------- */
+
+
+function printString(string, callback){
+    const delay = Math.floor(Math.random() * 1000) + 1;
+    setTimeout( function() {
+    console.log(string, delay);
+    callback();
+    },
+    delay
+    )
+   }
+   // in parallel(ish)
+//    function printAll(){
+//     printString("A");
+//     printString("B");
+//     printString("C");
+//    }
+   // in turn
+   function printAll(){
+        printString("A", function() {
+            printString("B", function() {
+                printString("C", function(){} )
+            })
+        })
+   }
+
+   printAll();
