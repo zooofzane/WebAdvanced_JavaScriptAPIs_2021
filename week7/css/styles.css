@@ -2,17 +2,19 @@ body {
   font-family: arial;
 }
 
+
+
 section {
-  width: 70%;
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 30px;
-  border: 1px solid lightgrey;
-  background-color: #fafafa;
+  width: 100%;
+  /* max-width: 780px; */
+  margin: 0;
+  padding: 0px;
+  /* border: 1px solid lightgrey; */
+  /* background-color: #fafafa; */
 }
 h1 {
-  text-align: center;
-  color: green;
+  text-align: left;
+  color: rgb(0, 0, 0);
 }
 ul {
   display: block;
@@ -24,9 +26,7 @@ ul {
 }
 ul li {
   float: left;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin:0px;
   align-items: center;
 
 }
@@ -48,7 +48,7 @@ p strong {
 }
 
 .highlight {
-  color: green;
+  color: rgb(0, 0, 0);
 }
 
 .tip {
@@ -62,19 +62,19 @@ p strong {
 }
 
 h2 {
-  text-align: center;
+  text-align: left;
 }
 form {
   margin: 0 auto;
 }
 form input[type=text], form input[type=password], form input[type=number] {
-  width: 50%;
+  width: 20%;
   padding: 10px;
 }
 
 button {
   padding: 10px;
-  width: 30%;
+  width: 20%;
   display: block;
   margin-top: 20px;
 }
@@ -105,7 +105,7 @@ form .error {
 
 
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #606060;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -114,7 +114,7 @@ form .error {
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .dropdown-content {
@@ -122,12 +122,12 @@ form .error {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(133, 133, 133, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: rgb(120, 120, 120);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -137,4 +137,4 @@ form .error {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #000000;}
